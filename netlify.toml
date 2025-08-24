@@ -1,4 +1,9 @@
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+[build]
+  command = "npm run build"
+  publish = "dist" # or "build" for React, "out" for Next.js, etc.
+  base = "."       # optional, but if you add it, make sure it’s valid
+
+[dev]
+  command = "npm run dev"
+  port = 8888
+  publish = "dist"
